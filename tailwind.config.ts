@@ -1,17 +1,27 @@
 import type {Config} from 'tailwindcss';
 
 export default {
-  darkMode: ['class'],
+  darkMode: ['class'], // Maintained for shadcn compatibility, though app is dark by default
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      },
+    },
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
+        headline: ['Space Grotesk', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
@@ -88,11 +98,25 @@ export default {
             height: '0',
           },
         },
+        'stat-ticker-scroll': {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-100%)' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'stat-ticker-scroll': 'stat-ticker-scroll 30s linear infinite',
+        'float': 'float 3s ease-in-out infinite',
       },
+      boxShadow: {
+        'neon-primary': '0 0 15px hsl(var(--primary)), 0 0 30px hsl(var(--primary)/0.7), 0 0 45px hsl(var(--primary)/0.4)',
+        'neon-accent': '0 0 15px hsl(var(--accent)), 0 0 30px hsl(var(--accent)/0.7), 0 0 45px hsl(var(--accent)/0.4)',
+      }
     },
   },
   plugins: [require('tailwindcss-animate')],
