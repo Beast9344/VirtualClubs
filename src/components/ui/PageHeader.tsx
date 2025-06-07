@@ -18,12 +18,12 @@ export function PageHeader({
   centered = true 
 }: PageHeaderProps) {
   return (
-    <div className={cn("mb-12 md:mb-16", centered && "text-center", className)}>
-      <h1 className={cn("text-4xl font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl font-headline", titleClassName)}>
+    <div className={cn("mb-8 sm:mb-12 md:mb-16", centered && "text-center", className)}>
+      <h1 className={cn("text-3xl font-bold tracking-tight text-primary sm:text-4xl md:text-5xl lg:text-6xl font-headline", titleClassName)}>
         {title}
       </h1>
       {subtitle && (
-        <p className={cn("mt-4 max-w-2xl text-lg text-foreground/80 sm:text-xl", centered && "mx-auto", subtitleClassName)}>
+        <p className={cn("mt-3 sm:mt-4 max-w-2xl text-base sm:text-lg text-foreground/80", centered && "mx-auto", subtitleClassName)}>
           {subtitle}
         </p>
       )}

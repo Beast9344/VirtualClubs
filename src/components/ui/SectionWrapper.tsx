@@ -16,7 +16,7 @@ export function SectionWrapper({
   ...props 
 }: SectionWrapperProps) {
   return (
-    <Element className={cn("py-16 md:py-24", className)} {...props}>
+    <Element className={cn("py-12 sm:py-16 md:py-20 lg:py-24", className)} {...props}>
       <div className={cn("container", containerClassName)}> {/* Tailwind's container class handles mx-auto and padding based on breakpoints */}
         {children}
       </div>

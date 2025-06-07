@@ -7,7 +7,7 @@ import { DISCORD_INVITE_URL } from '@/lib/constants';
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden py-20 md:py-32 lg:py-40 bg-gradient-to-br from-background to-indigo-950/30">
+    <section className="relative overflow-hidden py-16 md:py-24 lg:py-32 bg-gradient-to-br from-background to-indigo-950/30">
       {/* Subtle background elements if desired */}
       <div className="absolute inset-0 opacity-10">
         {/* Example: <Image src="/path/to/bg-pattern.svg" layout="fill" objectFit="cover" alt="background pattern" /> */}
@@ -16,13 +16,13 @@ export function HeroSection() {
       <div className="container relative z-10">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="text-center lg:text-left">
-            <h1 className="font-headline text-4xl font-bold tracking-tight text-primary sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl md:text-5xl lg:text-6xl">
               VirtualProClubs
             </h1>
-            <p className="mt-6 text-lg leading-8 text-foreground/90 sm:text-xl lg:text-2xl">
+            <p className="mt-4 sm:mt-6 text-md sm:text-lg leading-7 sm:leading-8 text-foreground/90 lg:text-xl">
               The next-gen football companion app. Track stats, simulate your avatar's life, manage teams, and build your career in one immersive ecosystem.
             </p>
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
+            <div className="mt-8 sm:mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
               <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-neon-primary transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
                 <a href={DISCORD_INVITE_URL} target="_blank" rel="noopener noreferrer">
                   Join Waitlist & Discord <ArrowRight className="ml-2 h-5 w-5" />
@@ -51,14 +51,14 @@ export function HeroSection() {
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <div className="absolute bottom-4 left-4 text-white">
-                <h3 className="font-headline text-xl font-semibold">Your Digital Football Legacy Starts Here</h3>
-                <p className="text-sm opacity-80">Experience the evolution.</p>
+              <div className="absolute bottom-4 left-4 text-white p-2">
+                <h3 className="font-headline text-lg sm:text-xl font-semibold">Your Digital Football Legacy Starts Here</h3>
+                <p className="text-xs sm:text-sm opacity-80">Experience the evolution.</p>
               </div>
             </FloatingCard>
              {/* Decorative floating elements - example */}
-            <div className="absolute -top-8 -right-8 h-24 w-24 animate-float rounded-full bg-primary/30 opacity-50 blur-xl animation-delay-300"></div>
-            <div className="absolute -bottom-8 -left-8 h-32 w-32 animate-float rounded-full bg-accent/30 opacity-50 blur-2xl animation-delay-600"></div>
+            <div className="absolute -top-4 -right-4 sm:-top-8 sm:-right-8 h-16 w-16 sm:h-24 sm:w-24 animate-float rounded-full bg-primary/30 opacity-50 blur-xl animation-delay-300"></div>
+            <div className="absolute -bottom-4 -left-4 sm:-bottom-8 sm:-left-8 h-20 w-20 sm:h-32 sm:w-32 animate-float rounded-full bg-accent/30 opacity-50 blur-2xl animation-delay-600"></div>
           </div>
         </div>
       </div>

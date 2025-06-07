@@ -24,7 +24,7 @@ export default function LeaderboardPage() {
       />
       <SectionWrapper>
         <Tabs defaultValue="players" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 max-w-2xl mx-auto mb-12 bg-primary/10 border border-primary/20">
+          <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 max-w-2xl mx-auto mb-12 bg-primary/10 border border-primary/20">
             <TabsTrigger value="players" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">Top Players</TabsTrigger>
             <TabsTrigger value="teams" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">Top Teams</TabsTrigger>
             <TabsTrigger value="clips" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">Top Clips</TabsTrigger>
