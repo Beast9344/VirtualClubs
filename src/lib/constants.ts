@@ -1,6 +1,6 @@
 
 import type { NavItem, Feature, FaqItem, LegendBenefit, MonetizationStream, StatCardItem, PlayerQuote, RoadmapItem, TeamMember, HowItWorksStep, LifecycleStep, AppModulePreview } from '@/types';
-import { ShieldCheck, BarChart3, Users, Star, Trophy, MessageSquare, Compass, FileText, HelpCircle, Briefcase, TrendingUp, UserPlus, ShieldQuestion, Gamepad2, Users2, Bot, UploadCloud, Zap, Award, Target, DollarSign, RadioTower, CalendarDays, Sparkles, Rocket, Brain, Network, Play, Smartphone, BarChartHorizontalBig, ScanText } from 'lucide-react';
+import { ShieldCheck, BarChart3, Users, Star, Trophy, MessageSquare, Compass, FileText, HelpCircle, Briefcase, TrendingUp, UserPlus, ShieldQuestion, Gamepad2, Users2, Bot, UploadCloud, Zap, Award, Target, DollarSign, RadioTower, CalendarDays, Sparkles, Rocket, Brain, Network, Play, Smartphone, BarChartHorizontalBig, ScanText, Share2, Calculator, Vote, Activity } from 'lucide-react';
 
 export const SITE_NAME = "VirtualProClubs";
 export const DISCORD_INVITE_URL = "https://discord.gg/your-invite-link"; // Replace with actual Discord invite
@@ -15,55 +15,84 @@ export const NAV_LINKS: NavItem[] = [
 
 export const FEATURES_LIST: Feature[] = [
   {
-    title: 'VPC Life: The Simulation',
-    description: 'Live out your pro career. Manage finances, relationships, and lifestyle choices that impact your on-field performance and off-field legacy.',
-    icon: Gamepad2,
-    image: 'https://placehold.co/600x400/121E33/f0f4f8?text=VPC+Life',
-    dataAiHint: 'digital lifestyle',
+    title: 'VPC Life™ Economy',
+    description: 'Manage your pro\'s finances, investments, and lifestyle within a dynamic in-app economy. Make choices that impact your virtual career and wealth.',
+    icon: Activity, // Replaced DollarSign for more "economy activity" feel
+    image: 'https://placehold.co/600x400/121E33/f0f4f8?text=VPC+Life+Economy',
+    dataAiHint: 'digital economy graph',
   },
   {
-    title: 'Dynamic Leaderboards',
-    description: 'Compete for glory. Global and regional leaderboards for players, teams, and even viral clips. Updated in real-time.',
-    icon: BarChart3,
-    image: 'https://placehold.co/600x400/121E33/f0f4f8?text=Leaderboards',
-    dataAiHint: 'stat chart',
-  },
-  {
-    title: 'Advanced Avatar Builder',
-    description: 'Craft your unique identity. Deep customization options for your in-game pro, from appearance to gear and celebrations.',
-    icon: Users2,
-    image: 'https://placehold.co/600x400/121E33/f0f4f8?text=Avatar+Builder',
-    dataAiHint: 'player avatar',
-  },
-  {
-    title: 'OCR Match Upload',
-    description: 'Effortless stat tracking. Simply upload a screenshot of your match results, and our OCR technology parses the data automatically.',
+    title: 'Match Upload + OCR',
+    description: 'Effortlessly track your game stats. Upload screenshots of match results, and our OCR technology will automatically parse and record your performance.',
     icon: UploadCloud,
     image: 'https://placehold.co/600x400/121E33/f0f4f8?text=OCR+Upload',
-    dataAiHint: 'data upload',
+    dataAiHint: 'data upload scan',
   },
   {
-    title: 'Engaging Missions & Challenges',
-    description: 'Earn XP and rewards. Complete daily, weekly, and special event missions to boost your pro’s development and unlock exclusive items.',
-    icon: Zap,
+    title: 'Team Hub + Comms',
+    description: 'Coordinate with your teammates in a dedicated hub. Plan strategies, schedule matches, and communicate effectively for better team synergy.',
+    icon: Users,
+    image: 'https://placehold.co/600x400/121E33/f0f4f8?text=Team+Hub',
+    dataAiHint: 'team communication chat',
+  },
+  {
+    title: 'Auto-Generated CV (PDF/Web)',
+    description: 'Showcase your virtual pro\'s achievements with an automatically generated CV, available as a shareable PDF or web link.',
+    icon: FileText,
+    image: 'https://placehold.co/600x400/121E33/f0f4f8?text=Player+CV',
+    dataAiHint: 'digital resume document',
+  },
+  {
+    title: 'Leaderboards',
+    description: 'Compete for glory. Track your rank on global and regional leaderboards for various stats, keeping the competitive spirit alive.',
+    icon: BarChart3,
+    image: 'https://placehold.co/600x400/121E33/f0f4f8?text=Leaderboards',
+    dataAiHint: 'stat chart rank',
+  },
+  {
+    title: 'XP + VLevel Ascension™',
+    description: 'Earn Experience Points (XP) through gameplay and missions. Level up your pro with VLevel Ascension™ to unlock new skills and perks.',
+    icon: TrendingUp,
+    image: 'https://placehold.co/600x400/121E33/f0f4f8?text=XP+Progression',
+    dataAiHint: 'level up arrow',
+  },
+  {
+    title: 'Avatar Builder + Inventory',
+    description: 'Customize your virtual pro\'s appearance with an extensive avatar builder and manage your collection of gear and items in your inventory.',
+    icon: Users2,
+    image: 'https://placehold.co/600x400/121E33/f0f4f8?text=Avatar+Builder',
+    dataAiHint: 'player customization character',
+  },
+  {
+    title: 'Referral + Social Graph',
+    description: 'Grow your network. Invite friends to join VirtualProClubs and build your social graph to connect with other players and teams.',
+    icon: Share2,
+    image: 'https://placehold.co/600x400/121E33/f0f4f8?text=Social+Graph',
+    dataAiHint: 'social network connections',
+  },
+  {
+    title: 'Missions + Rewards',
+    description: 'Undertake diverse missions and challenges to earn exclusive rewards, XP, and in-game items, keeping your journey engaging.',
+    icon: Target, // Replaced Zap for better "mission" feel
     image: 'https://placehold.co/600x400/121E33/f0f4f8?text=Missions',
-    dataAiHint: 'achievement goal',
+    dataAiHint: 'achievement goal target',
+  },
+  {
+    title: 'Player Valuation System',
+    description: 'Discover your pro\'s market value with our dynamic valuation system, influenced by performance, XP, and community perception.',
+    icon: Calculator,
+    image: 'https://placehold.co/600x400/121E33/f0f4f8?text=Player+Valuation',
+    dataAiHint: 'financial value chart',
   },
   {
     title: 'Community Stat Voting',
-    description: 'Have your say. Participate in community votes to influence player ratings and attribute adjustments based on real performances.',
-    icon: Award,
+    description: 'Participate in community polls to influence player attribute ratings, ensuring stats reflect perceived performance and skill.',
+    icon: Vote, // Replaced Award for direct "voting" context
     image: 'https://placehold.co/600x400/121E33/f0f4f8?text=Stat+Voting',
-    dataAiHint: 'community poll',
-  },
-  {
-    title: 'Live Transfer Feed',
-    description: 'Stay updated on player movements. A dynamic feed showcasing transfers, contract negotiations, and loan deals across the VPC ecosystem.',
-    icon: RadioTower,
-    image: 'https://placehold.co/600x400/121E33/f0f4f8?text=Transfer+Feed',
-    dataAiHint: 'news feed',
-  },
+    dataAiHint: 'community poll vote',
+  }
 ];
+
 
 export const LEGEND_PASS_BENEFITS: { free: LegendBenefit[], legend: LegendBenefit[] } = {
   free: [
