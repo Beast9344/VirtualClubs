@@ -39,7 +39,7 @@ export function Navbar() {
               key={link.label}
               href={link.href}
               className={cn(
-                "transition-colors hover:text-primary",
+                "transition-colors duration-200 hover:text-primary",
                 pathname === link.href ? "text-primary" : "text-foreground/80"
               )}
             >
@@ -49,7 +49,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden md:flex items-center space-x-3">
-          <Button asChild variant="default" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-neon-primary transition-shadow duration-300">
+          <Button asChild variant="default" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-neon-primary">
             <a href={DISCORD_INVITE_URL} target="_blank" rel="noopener noreferrer">
               Join Discord
             </a>
@@ -77,7 +77,7 @@ export function Navbar() {
                     <Link
                       href={link.href}
                       className={cn(
-                        "block rounded-md px-3 py-2 text-base font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
+                        "block rounded-md px-3 py-2 text-base font-medium transition-colors duration-200 hover:bg-accent hover:text-accent-foreground",
                         pathname === link.href ? "bg-accent text-accent-foreground" : "text-foreground"
                       )}
                     >
@@ -86,7 +86,7 @@ export function Navbar() {
                   </SheetClose>
                 ))}
                 <SheetClose asChild>
-                  <Button asChild variant="default" size="lg" className="w-full mt-4 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-neon-primary transition-shadow duration-300">
+                  <Button asChild variant="default" size="lg" className="w-full mt-4 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-neon-primary">
                     <a href={DISCORD_INVITE_URL} target="_blank" rel="noopener noreferrer">
                       Join Discord
                     </a>
