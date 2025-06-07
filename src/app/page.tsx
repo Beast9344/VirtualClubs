@@ -13,6 +13,7 @@ import Image from 'next/image';
 import { LegendPassCtaSection } from '@/components/homepage/LegendPassCtaSection';
 import { LeaderboardPreview } from '@/components/homepage/LeaderboardPreview';
 import { CommunityHubSection } from '@/components/homepage/CommunityHubSection';
+import { HomepageContactForm } from '@/components/forms/HomepageContactForm';
 
 export default function HomePage() {
   return (
@@ -92,6 +93,10 @@ export default function HomePage() {
       <VisionTrailer />
 
       <CommunityHubSection />
+
+      <SectionWrapper className="bg-background/70">
+        <HomepageContactForm />
+      </SectionWrapper>
 
       <SectionWrapper>
         <FloatingCard className="bg-gradient-to-r from-primary/80 to-accent/80 text-primary-foreground p-8 md:p-12" hoverEffect={false}>
