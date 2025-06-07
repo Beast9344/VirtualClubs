@@ -59,7 +59,7 @@ export const FEATURES_LIST: Feature[] = [
   {
     title: 'Avatar Builder + Inventory',
     description: 'Customize your virtual pro\'s appearance with an extensive avatar builder and manage your collection of gear and items in your inventory.',
-    icon: Palette, // Changed from Users2 to Palette
+    icon: Palette,
     image: 'https://placehold.co/600x400/121E33/f0f4f8?text=Avatar+Builder',
     dataAiHint: 'player customization character',
   },
@@ -170,15 +170,19 @@ export const FAQ_ITEMS: FaqItem[] = [
 ];
 
 export const TOP_PLAYERS: StatCardItem[] = [
-  { id: '1', name: 'StrikerSupreme', mainStat: 'Goals: 250', secondaryStat: 'Rating: 9.5', image: 'https://placehold.co/100x100/BE29EC/f5e6fc?text=P1', dataAiHint: 'player avatar' },
-  { id: '2', name: 'MidfieldMaestro', mainStat: 'Assists: 180', secondaryStat: 'Rating: 9.3', image: 'https://placehold.co/100x100/BE29EC/f5e6fc?text=P2', dataAiHint: 'player avatar' },
-  { id: '3', name: 'WallDefender', mainStat: 'Tackles: 300', secondaryStat: 'Rating: 9.2', image: 'https://placehold.co/100x100/BE29EC/f5e6fc?text=P3', dataAiHint: 'player avatar' },
+  { id: '1', name: 'StrikerSupreme', mainStat: 'XP: 150,000 | VC$: 2.5M', secondaryStat: 'Goals: 250', image: 'https://placehold.co/100x100/BE29EC/f5e6fc?text=P1', dataAiHint: 'player avatar' },
+  { id: '2', name: 'MidfieldMaestro', mainStat: 'XP: 125,000 | VC$: 1.8M', secondaryStat: 'Goals: 180', image: 'https://placehold.co/100x100/BE29EC/f5e6fc?text=P2', dataAiHint: 'player avatar' },
+  { id: '3', name: 'WallDefender', mainStat: 'XP: 110,000 | VC$: 1.2M', secondaryStat: 'Goals: 50', image: 'https://placehold.co/100x100/BE29EC/f5e6fc?text=P3', dataAiHint: 'player avatar' },
+  { id: '4', name: 'AgileAssassin', mainStat: 'XP: 180,000 | VC$: 3.1M', secondaryStat: 'Goals: 220', image: 'https://placehold.co/100x100/BE29EC/f5e6fc?text=P4', dataAiHint: 'player avatar' },
+  { id: '5', name: 'GoalMachine', mainStat: 'XP: 200,000 | VC$: 4.0M', secondaryStat: 'Goals: 300', image: 'https://placehold.co/100x100/BE29EC/f5e6fc?text=P5', dataAiHint: 'player avatar' },
 ];
 
 export const TOP_TEAMS: StatCardItem[] = [
-  { id: 'T1', name: 'Galactic FC', mainStat: 'Wins: 50', secondaryStat: 'Rank: 1', image: 'https://placehold.co/100x100/EC297B/fce6ee?text=T1', dataAiHint: 'team logo' },
-  { id: 'T2', name: 'Shadow Strikers', mainStat: 'Wins: 45', secondaryStat: 'Rank: 2', image: 'https://placehold.co/100x100/EC297B/fce6ee?text=T2', dataAiHint: 'team logo' },
-  { id: 'T3', name: 'Phantom XI', mainStat: 'Wins: 42', secondaryStat: 'Rank: 3', image: 'https://placehold.co/100x100/EC297B/fce6ee?text=T3', dataAiHint: 'team logo' },
+  { id: 'T1', name: 'Galactic FC', mainStat: 'Win %: 75 | VC$: 1.2M', secondaryStat: 'Global Rank: 1', image: 'https://placehold.co/100x100/EC297B/fce6ee?text=T1', dataAiHint: 'team logo' },
+  { id: 'T2', name: 'Shadow Strikers', mainStat: 'Win %: 72 | VC$: 950K', secondaryStat: 'Global Rank: 2', image: 'https://placehold.co/100x100/EC297B/fce6ee?text=T2', dataAiHint: 'team logo' },
+  { id: 'T3', name: 'Phantom XI', mainStat: 'Win %: 68 | VC$: 800K', secondaryStat: 'Global Rank: 3', image: 'https://placehold.co/100x100/EC297B/fce6ee?text=T3', dataAiHint: 'team logo' },
+  { id: 'T4', name: 'Cosmic United', mainStat: 'Win %: 80 | VC$: 1.5M', secondaryStat: 'Global Rank: 4', image: 'https://placehold.co/100x100/EC297B/fce6ee?text=T4', dataAiHint: 'team logo' },
+  { id: 'T5', name: 'Nova Legends', mainStat: 'Win %: 70 | VC$: 1.0M', secondaryStat: 'Global Rank: 5', image: 'https://placehold.co/100x100/EC297B/fce6ee?text=T5', dataAiHint: 'team logo' },
 ];
 
 export const PLAYER_QUOTES: PlayerQuote[] = [

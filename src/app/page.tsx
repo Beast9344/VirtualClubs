@@ -11,6 +11,7 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 import { FloatingCard } from '@/components/ui/FloatingCard';
 import Image from 'next/image';
 import { LegendPassCtaSection } from '@/components/homepage/LegendPassCtaSection';
+import { LeaderboardPreview } from '@/components/homepage/LeaderboardPreview';
 
 export default function HomePage() {
   return (
@@ -35,15 +36,15 @@ export default function HomePage() {
                 <div className="w-full h-48 relative rounded-t-lg overflow-hidden mb-4">
                   <Image src={feature.image || `https://placehold.co/600x400/121E33/f0f4f8?text=${encodeURIComponent(feature.title)}`} alt={feature.title} layout="fill" objectFit="cover" data-ai-hint={feature.dataAiHint || "abstract illustration"}/>
                 </div>
-                <div className="flex items-center text-primary mb-2">
+                <div className="flex items-center text-primary mb-2 px-6">
                   <feature.icon className="h-7 w-7 mr-3" />
                   <CardTitle className="font-headline text-2xl text-primary">{feature.title}</CardTitle>
                 </div>
               </CardHeader>
-              <CardContent className="p-0 flex-grow">
+              <CardContent className="p-0 px-6 pb-6 flex-grow">
                 <p className="text-foreground/80">{feature.description}</p>
               </CardContent>
-              <div className="mt-6">
+              <div className="mt-6 px-6 pb-6">
                 <Button variant="link" asChild className="text-accent p-0 hover:text-accent/80">
                   <Link href="/features">Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
@@ -69,11 +70,11 @@ export default function HomePage() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {HOW_IT_WORKS_STEPS.map((step) => (
-             <FloatingCard key={step.title} className="text-center" hoverEffect="subtle">
+             <FloatingCard key={step.title} className="text-center p-6" hoverEffect="subtle">
               <step.icon className="h-12 w-12 text-accent mx-auto mb-6" />
               <h3 className="font-headline text-2xl font-semibold text-primary mb-3">{step.title}</h3>
-              <p className="text-foreground/80 text-sm">{step.description.substring(0,100)}...</p>
-              <Button variant="link" asChild className="text-accent mt-4 p-0 hover:text-accent/80">
+              <p className="text-foreground/80 text-sm mb-4">{step.description.substring(0,100)}...</p>
+              <Button variant="link" asChild className="text-accent p-0 hover:text-accent/80">
                   <Link href="/how-it-works">Discover More <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </FloatingCard>
@@ -84,6 +85,8 @@ export default function HomePage() {
       <SectionWrapper>
         <LegendPassCtaSection />
       </SectionWrapper>
+
+      <LeaderboardPreview />
       
       <VisionTrailer />
 
@@ -126,3 +129,4 @@ export default function HomePage() {
     </>
   );
 }
+

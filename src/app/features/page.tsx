@@ -8,6 +8,7 @@ import { FloatingCard } from '@/components/ui/FloatingCard';
 import { FEATURES_LIST } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 import { ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 
 export default function FeaturesPage() {
   const [expandedFeature, setExpandedFeature] = useState<string | null>(null);
@@ -29,14 +30,26 @@ export default function FeaturesPage() {
             return (
               <FloatingCard
                 key={feature.title}
-                className="flex flex-col p-6 cursor-pointer"
+                className="flex flex-col cursor-pointer"
                 onClick={() => handleToggleExpand(feature.title)}
                 hoverEffect="subtle"
                 aria-expanded={isExpanded}
               >
-                <div className="flex items-center">
+                {feature.image && (
+                  <div className="relative w-full h-40 mb-4 rounded-t-lg overflow-hidden group">
+                     <Image 
+                        src={feature.image} 
+                        alt={feature.title} 
+                        layout="fill" 
+                        objectFit="cover" 
+                        className="transition-transform duration-300 group-hover:scale-105"
+                        data-ai-hint={feature.dataAiHint || "feature illustration"}
+                      />
+                  </div>
+                )}
+                <div className="flex items-center px-6">
                   <feature.icon className="h-8 w-8 mr-4 text-primary shrink-0" />
-                  <h3 className="font-headline text-xl font-semibold text-primary">{feature.title}</h3>
+                  <h3 className="font-headline text-xl font-semibold text-primary flex-grow">{feature.title}</h3>
                   <ChevronDown
                     className={cn(
                       "ml-auto h-5 w-5 text-primary/70 transition-transform duration-300",
@@ -46,12 +59,24 @@ export default function FeaturesPage() {
                 </div>
                 <div
                   className={cn(
-                    "transition-all duration-500 ease-in-out overflow-hidden",
-                    isExpanded ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0 mt-0"
+                    "transition-all duration-500 ease-in-out overflow-hidden px-6",
+                    isExpanded ? "max-h-96 opacity-100 mt-4 pb-6" : "max-h-0 opacity-0 mt-0 pb-0"
                   )}
                 >
                   <p className="text-foreground/80 text-sm">{feature.description}</p>
                 </div>
+                 {!isExpanded && !feature.image && (
+                  <div className="px-6 pt-2 pb-6"> {/* Add padding if no image and not expanded to maintain card height consistency */}
+                    <p className="text-foreground/80 text-sm h-16 overflow-hidden">{feature.description.substring(0,100)}...</p>
+                  </div>
+                )}
+                 {!isExpanded && feature.image && (
+                  <div className="px-6 pt-2 pb-6"> {/* Ensure some padding below title if image exists but not expanded */}
+                     <p className="text-transparent text-sm h-0">{/* Placeholder for height consistency if needed */}</p>
+                  </div>
+                )}
+
+
               </FloatingCard>
             );
           })}
