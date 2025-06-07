@@ -1,6 +1,6 @@
 
-import type { NavItem, Feature, FaqItem, LegendBenefit, MonetizationStream, StatCardItem, PlayerQuote, RoadmapItem, TeamMember } from '@/types';
-import { ShieldCheck, BarChart3, Users, Star, Trophy, MessageSquare, Compass, FileText, HelpCircle, Briefcase, TrendingUp, UserPlus, ShieldQuestion, Gamepad2, Users2, Bot, UploadCloud, Zap, Award, Target, DollarSign, RadioTower, CalendarDays, Sparkles, Rocket, Brain, Network, Play } from 'lucide-react';
+import type { NavItem, Feature, FaqItem, LegendBenefit, MonetizationStream, StatCardItem, PlayerQuote, RoadmapItem, TeamMember, HowItWorksStep, LifecycleStep, AppModulePreview } from '@/types';
+import { ShieldCheck, BarChart3, Users, Star, Trophy, MessageSquare, Compass, FileText, HelpCircle, Briefcase, TrendingUp, UserPlus, ShieldQuestion, Gamepad2, Users2, Bot, UploadCloud, Zap, Award, Target, DollarSign, RadioTower, CalendarDays, Sparkles, Rocket, Brain, Network, Play, Smartphone, BarChartHorizontalBig, ScanText } from 'lucide-react';
 
 export const SITE_NAME = "VirtualProClubs";
 export const DISCORD_INVITE_URL = "https://discord.gg/your-invite-link"; // Replace with actual Discord invite
@@ -31,7 +31,7 @@ export const FEATURES_LIST: Feature[] = [
   {
     title: 'Advanced Avatar Builder',
     description: 'Craft your unique identity. Deep customization options for your in-game pro, from appearance to gear and celebrations.',
-    icon: Users2, // Changed from Avatar (not in lucide)
+    icon: Users2,
     image: 'https://placehold.co/600x400/121E33/f0f4f8?text=Avatar+Builder',
     dataAiHint: 'player avatar',
   },
@@ -197,35 +197,59 @@ export const ROADMAP_ITEMS: RoadmapItem[] = [
 ];
 
 
-export const HOW_IT_WORKS_STEPS = [
+export const HOW_IT_WORKS_STEPS: HowItWorksStep[] = [
   {
-    title: "The Player: Your Journey Begins",
-    description: "Create your unique virtual pro, customize your appearance, and start your career. Play matches, upload your stats (manually or via OCR), and earn XP to improve your attributes. Complete missions, build your professional CV, and share your highlights with the community.",
+    title: "Start as a Player",
+    description: "Create your pro, play matches, and upload stats via OCR or manually. Gain XP, complete missions, build your CV, and make a name for yourself. Your journey begins on the pitch, honing skills and rising through the ranks.",
     icon: UserPlus,
-    image: "https://placehold.co/600x400/121E33/f0f4f8?text=Player+Journey",
-    dataAiHint: "player journey",
+    image: "https://placehold.co/600x400/121E33/BE29EC?text=Player+Focus",
+    dataAiHint: "player football action",
   },
   {
-    title: "The Manager: Lead Your Team to Glory",
-    description: "Take on the role of a team manager. Recruit players, set tactics, manage your squad's morale and finances within the VPC Life simulation. Compete in leagues, organize friendlies, and build a dynasty.",
+    title: "Evolve into a Manager",
+    description: "Ready for more responsibility? Become a team manager. Recruit talent, define tactics, manage your squad's morale, and handle club finances through VPC Life™. Lead your team to victory and build a lasting legacy.",
     icon: Briefcase,
-    image: "https://placehold.co/600x400/121E33/f0f4f8?text=Manager+Mode",
-    dataAiHint: "team management",
+    image: "https://placehold.co/600x400/121E33/EC297B?text=Manager+Tactics",
+    dataAiHint: "manager strategy board",
   },
   {
-    title: "The League Admin: Shape the Competition",
-    description: "Purchase a League License to create and administer your own custom leagues. Utilize powerful tools for fixture generation, results validation, rule enforcement, and communication with participating teams. Foster a competitive and fair environment.",
+    title: "Ascend to League Admin",
+    description: "Mastered management? Shape the entire competitive landscape as a League Administrator. Create custom leagues, manage fixtures, validate results, and foster a thriving community. Your decisions impact hundreds of players and teams.",
     icon: ShieldCheck,
-    image: "https://placehold.co/600x400/121E33/f0f4f8?text=League+Admin",
-    dataAiHint: "league tools",
+    image: "https://placehold.co/600x400/BE29EC/f5e6fc?text=League+Admin+View",
+    dataAiHint: "league dashboard overview",
   },
 ];
 
-export const VPC_LIFECYCLE_STEPS = [
-  { name: "Upload Match", description: "Submit match results via OCR or manual input.", icon: UploadCloud },
-  { name: "Earn XP", description: "Gain experience points for performance and completing missions.", icon: Zap },
-  { name: "Share CV", description: "Showcase your stats and achievements to potential teams and scouts.", icon: FileText },
-  { name: "Play VPC Life", description: "Manage your pro's off-field career and lifestyle.", icon: Gamepad2 },
+export const VPC_LIFECYCLE_STEPS: LifecycleStep[] = [
+  { name: "Upload Stats", description: "Easily submit match results via OCR or manual entry.", icon: UploadCloud },
+  { name: "Track Stats", description: "See your performance data update in real-time on your profile.", icon: BarChart3 },
+  { name: "Earn Rewards", description: "Gain XP, unlock achievements, and receive in-game items.", icon: Award },
+  { name: "Progress Pro", description: "Improve your avatar's skills, attributes, and overall VPC Life™.", icon: TrendingUp },
+];
+
+export const APP_MODULE_PREVIEWS: AppModulePreview[] = [
+  {
+    title: 'VPC Life™ Dashboard',
+    description: 'Manage your pro\'s off-field activities, finances, training, and lifestyle choices that directly impact your career.',
+    icon: Smartphone,
+    image: 'https://placehold.co/600x400/BE29EC/f5e6fc?text=VPC+Life+Dashboard',
+    dataAiHint: 'app dashboard',
+  },
+  {
+    title: 'XP & Progression Tracker',
+    description: 'Monitor your experience points, skill development, and progress towards unlocking new abilities and rewards.',
+    icon: BarChartHorizontalBig,
+    image: 'https://placehold.co/600x400/EC297B/fce6ee?text=XP+Tracker',
+    dataAiHint: 'progress chart',
+  },
+  {
+    title: 'Stat OCR Uploader',
+    description: 'Quickly upload match results by snapping a photo. Our OCR tech automatically parses stats for you.',
+    icon: ScanText,
+    image: 'https://placehold.co/600x400/121E33/BE29EC?text=Stat+OCR',
+    dataAiHint: 'ocr scan app',
+  },
 ];
 
 export const LEGAL_PAGES: NavItem[] = [
@@ -236,11 +260,7 @@ export const LEGAL_PAGES: NavItem[] = [
 ];
 
 export const SOCIAL_LINKS = [
-    // Add actual links
   { name: 'Discord', href: DISCORD_INVITE_URL, icon: MessageSquare },
-  { name: 'Twitter', href: '#', icon: Compass }, // Placeholder for Twitter/X icon
-  { name: 'TikTok', href: '#', icon: Play }, // Placeholder for TikTok icon, Play can be temp
+  { name: 'Twitter', href: '#', icon: Compass }, 
+  { name: 'TikTok', href: '#', icon: Play },
 ];
-
-
-    

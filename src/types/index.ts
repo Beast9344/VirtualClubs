@@ -1,3 +1,4 @@
+
 import type { LucideIcon } from 'lucide-react';
 
 export interface NavItem {
@@ -97,4 +98,12 @@ export interface SupportFormData {
   email: string;
   subject: string;
   message: string;
+}
+
+export interface AppModulePreview {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  image: string;
+  dataAiHint: string;
 }
