@@ -26,6 +26,7 @@ export interface FaqItem {
 export interface LegendBenefit {
   benefit: string;
   included: boolean;
+  details?: string; // Optional field for more specific information if needed
 }
 
 export interface MonetizationStream {

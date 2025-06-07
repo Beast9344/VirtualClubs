@@ -1,6 +1,6 @@
 
 import type { NavItem, Feature, FaqItem, LegendBenefit, MonetizationStream, StatCardItem, PlayerQuote, RoadmapItem, TeamMember, HowItWorksStep, LifecycleStep, AppModulePreview } from '@/types';
-import { ShieldCheck, BarChart3, Users, Star, Trophy, MessageSquare, Compass, FileText, HelpCircle, Briefcase, TrendingUp, UserPlus, ShieldQuestion, Gamepad2, Users2, Bot, UploadCloud, Zap, Award, Target, DollarSign, RadioTower, CalendarDays, Sparkles, Rocket, Brain, Network, Play, Smartphone, BarChartHorizontalBig, ScanText, Share2, Calculator, Vote, Activity } from 'lucide-react';
+import { ShieldCheck, BarChart3, Users, Star, Trophy, MessageSquare, Compass, FileText, HelpCircle, Briefcase, TrendingUp, UserPlus, ShieldQuestion, Gamepad2, Users2, Bot, UploadCloud, Zap, Award, Target, DollarSign, RadioTower, CalendarDays, Sparkles, Rocket, Brain, Network, Play, Smartphone, BarChartHorizontalBig, ScanText, Share2, Calculator, Vote, Activity, Home, Car, Palette } from 'lucide-react';
 
 export const SITE_NAME = "VirtualProClubs";
 export const DISCORD_INVITE_URL = "https://discord.gg/your-invite-link"; // Replace with actual Discord invite
@@ -17,7 +17,7 @@ export const FEATURES_LIST: Feature[] = [
   {
     title: 'VPC Life™ Economy',
     description: 'Manage your pro\'s finances, investments, and lifestyle within a dynamic in-app economy. Make choices that impact your virtual career and wealth.',
-    icon: Activity, // Replaced DollarSign for more "economy activity" feel
+    icon: Activity,
     image: 'https://placehold.co/600x400/121E33/f0f4f8?text=VPC+Life+Economy',
     dataAiHint: 'digital economy graph',
   },
@@ -59,7 +59,7 @@ export const FEATURES_LIST: Feature[] = [
   {
     title: 'Avatar Builder + Inventory',
     description: 'Customize your virtual pro\'s appearance with an extensive avatar builder and manage your collection of gear and items in your inventory.',
-    icon: Users2,
+    icon: Palette, // Changed from Users2 to Palette
     image: 'https://placehold.co/600x400/121E33/f0f4f8?text=Avatar+Builder',
     dataAiHint: 'player customization character',
   },
@@ -73,7 +73,7 @@ export const FEATURES_LIST: Feature[] = [
   {
     title: 'Missions + Rewards',
     description: 'Undertake diverse missions and challenges to earn exclusive rewards, XP, and in-game items, keeping your journey engaging.',
-    icon: Target, // Replaced Zap for better "mission" feel
+    icon: Target,
     image: 'https://placehold.co/600x400/121E33/f0f4f8?text=Missions',
     dataAiHint: 'achievement goal target',
   },
@@ -87,7 +87,7 @@ export const FEATURES_LIST: Feature[] = [
   {
     title: 'Community Stat Voting',
     description: 'Participate in community polls to influence player attribute ratings, ensuring stats reflect perceived performance and skill.',
-    icon: Vote, // Replaced Award for direct "voting" context
+    icon: Vote,
     image: 'https://placehold.co/600x400/121E33/f0f4f8?text=Stat+Voting',
     dataAiHint: 'community poll vote',
   }
@@ -100,32 +100,38 @@ export const LEGEND_PASS_BENEFITS: { free: LegendBenefit[], legend: LegendBenefi
     { benefit: 'Limited Avatar Customization', included: true },
     { benefit: 'Standard CV Builder', included: true },
     { benefit: 'Community Forum Access', included: true },
-    { benefit: 'VPC Life (Limited)', included: false },
-    { benefit: 'Exclusive Mansion & Assets', included: false },
-    { benefit: 'Family System Access', included: false },
-    { benefit: 'XP Boosters', included: false },
+    { benefit: 'Basic VPC Life™ Features', included: true, details: "Limited access" },
+    { benefit: 'Properties (Mansion & Assets)', included: false },
+    { benefit: 'Vehicles', included: false },
+    { benefit: 'Family System', included: false },
+    { benefit: 'Passive Income Mechanics', included: false },
+    { benefit: 'XP Boosters & Max Level Cap', included: false },
+    { benefit: 'Premium Leaderboard Access', included: false },
     { benefit: 'Priority Support', included: false },
-    { benefit: 'No Ads', included: false },
+    { benefit: 'Ad-Free Experience', included: false },
   ],
   legend: [
     { benefit: 'Advanced Stat Tracking & Analytics', included: true },
     { benefit: 'Full Avatar Customization & Premium Items', included: true },
-    { benefit: 'Professional CV Builder with Sharing', included: true },
-    { benefit: 'Legend-Only Discord Channels', included: true },
-    { benefit: 'VPC Life (Full Access)', included: true },
-    { benefit: 'Exclusive Mansion & Assets', included: true },
-    { benefit: 'Family System Access', included: true },
-    { benefit: 'XP Boosters', included: true },
-    { benefit: 'Priority Support', included: true },
-    { benefit: 'No Ads', included: true },
+    { benefit: 'Professional Career CV (PDF/Web)', included: true },
+    { benefit: 'Legend-Only Discord Channels & Events', included: true },
+    { benefit: 'Full VPC Life™ Access', included: true },
+    { benefit: 'Exclusive Properties (e.g., Digital Mansion)', included: true },
+    { benefit: 'Unlockable Vehicles', included: true },
+    { benefit: 'In-depth Family System & Interactions', included: true },
+    { benefit: 'Advanced Passive Income Mechanics', included: true },
+    { benefit: 'XP Boosters & Increased Level Cap (Lvl 120)', included: true },
+    { benefit: 'Access to Premium Leaderboards & Tiers', included: true },
+    { benefit: 'Priority Customer Support', included: true },
+    { benefit: 'Ad-Free Experience', included: true },
   ],
 };
 
 export const MONETIZATION_STREAMS: MonetizationStream[] = [
-  { stream: 'Player ProCore', price: '$5/mo', purpose: 'Stats history, CV builder, basic VPC Life features.', icon: UserPlus },
+  { stream: 'Legend Pass™', price: '$12.99/mo', purpose: 'Unlock all premium features, exclusive content, and the full VPC experience.', icon: Star },
   { stream: 'League License', price: '$25/mo', purpose: 'Fixture tools, validation, admin features, league promotion.', icon: ShieldCheck },
   { stream: 'Boosted Posts', price: '$2/promo', purpose: 'Paid exposure for clips/profiles on leaderboards and community hub.', icon: TrendingUp },
-  { stream: 'Premium Themes', price: '$3–5 each', purpose: 'Avatar skins, custom trophies, profile cosmetics, mansion upgrades.', icon: Sparkles },
+  { stream: 'Cosmetic Packs', price: '$3–10 each', purpose: 'Avatar skins, custom trophies, profile cosmetics, mansion upgrades.', icon: Sparkles },
   { stream: 'Sponsorships', price: 'Variable (CPM)', purpose: 'Ad placements, club kit sponsorships, branded tournaments, leaderboard takeovers.', icon: Briefcase },
 ];
 
