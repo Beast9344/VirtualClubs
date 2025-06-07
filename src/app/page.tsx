@@ -12,6 +12,7 @@ import { FloatingCard } from '@/components/ui/FloatingCard';
 import Image from 'next/image';
 import { LegendPassCtaSection } from '@/components/homepage/LegendPassCtaSection';
 import { LeaderboardPreview } from '@/components/homepage/LeaderboardPreview';
+import { CommunityHubSection } from '@/components/homepage/CommunityHubSection';
 
 export default function HomePage() {
   return (
@@ -33,8 +34,8 @@ export default function HomePage() {
           {FEATURES_LIST.slice(0,3).map((feature) => (
             <FloatingCard key={feature.title} className="flex flex-col" hoverEffect="subtle">
               <CardHeader className="p-0 mb-4">
-                <div className="w-full h-48 relative rounded-t-lg overflow-hidden mb-4">
-                  <Image src={feature.image || `https://placehold.co/600x400/121E33/f0f4f8?text=${encodeURIComponent(feature.title)}`} alt={feature.title} layout="fill" objectFit="cover" data-ai-hint={feature.dataAiHint || "abstract illustration"}/>
+                <div className="w-full h-48 relative rounded-t-lg overflow-hidden mb-4 group">
+                  <Image src={feature.image || `https://placehold.co/600x400/121E33/f0f4f8?text=${encodeURIComponent(feature.title)}`} alt={feature.title} layout="fill" objectFit="cover" className="transition-transform duration-300 group-hover:scale-105" data-ai-hint={feature.dataAiHint || "abstract illustration"}/>
                 </div>
                 <div className="flex items-center text-primary mb-2 px-6">
                   <feature.icon className="h-7 w-7 mr-3" />
@@ -90,6 +91,8 @@ export default function HomePage() {
       
       <VisionTrailer />
 
+      <CommunityHubSection />
+
       <SectionWrapper>
         <FloatingCard className="bg-gradient-to-r from-primary/80 to-accent/80 text-primary-foreground p-8 md:p-12" hoverEffect={false}>
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -129,4 +132,3 @@ export default function HomePage() {
     </>
   );
 }
-
