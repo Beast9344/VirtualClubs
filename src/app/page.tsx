@@ -1,3 +1,4 @@
+
 import { HeroSection } from '@/components/homepage/HeroSection';
 import { StatTicker } from '@/components/homepage/StatTicker';
 import { VisionTrailer } from '@/components/homepage/VisionTrailer';
@@ -9,6 +10,7 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { FloatingCard } from '@/components/ui/FloatingCard';
 import Image from 'next/image';
+import { LegendPassCtaSection } from '@/components/homepage/LegendPassCtaSection';
 
 export default function HomePage() {
   return (
@@ -77,6 +79,10 @@ export default function HomePage() {
             </FloatingCard>
           ))}
         </div>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <LegendPassCtaSection />
       </SectionWrapper>
       
       <VisionTrailer />
