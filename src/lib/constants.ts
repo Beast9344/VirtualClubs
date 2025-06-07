@@ -1,3 +1,4 @@
+
 import type { NavItem, Feature, FaqItem, LegendBenefit, MonetizationStream, StatCardItem, PlayerQuote, RoadmapItem, TeamMember } from '@/types';
 import { ShieldCheck, BarChart3, Users, Star, Trophy, MessageSquare, Compass, FileText, HelpCircle, Briefcase, TrendingUp, UserPlus, ShieldQuestion, Gamepad2, Users2, Bot, UploadCloud, Zap, Award, Target, DollarSign, RadioTower, CalendarDays, Sparkles, Rocket, Brain, Network, Play } from 'lucide-react';
 
@@ -6,14 +7,10 @@ export const DISCORD_INVITE_URL = "https://discord.gg/your-invite-link"; // Repl
 
 export const NAV_LINKS: NavItem[] = [
   { href: '/', label: 'Home' },
-  { href: '/how-it-works', label: 'How It Works' },
-  { href: '/features', label: 'Features' },
-  { href: '/legend-pass', label: 'Legend Pass' },
-  { href: '/leaderboard', label: 'Leaderboard' },
-  { href: '/community', label: 'Community' },
   { href: '/about', label: 'About Us' },
-  { href: '/partner', label: 'Leagues/Partners' },
-  { href: '/faq', label: 'FAQ' },
+  { href: '/leaderboard', label: 'Leaderboard' },
+  { href: '/features', label: 'Features' },
+  { href: '/partner', label: 'Leagues' },
 ];
 
 export const FEATURES_LIST: Feature[] = [
@@ -245,3 +242,5 @@ export const SOCIAL_LINKS = [
   { name: 'TikTok', href: '#', icon: Play }, // Placeholder for TikTok icon, Play can be temp
 ];
 
+
+    
